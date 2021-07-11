@@ -1,4 +1,4 @@
-# If you come from bash you might have to change your $PATH.
+t :q# If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 ZSH_THEME="robbyrussell"
@@ -9,17 +9,19 @@ export ENABLE_CORRECTION="true"
 export COMPLETION_WAITING_DOTS="true"
 
 source $ZSH/oh-my-zsh.sh
-# source "$ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 
 plugins=(
   git
+  git-prompt
+  doctl
+  python
+  pipenv
   gitfast
   kubectl
-  helm
+  docker
+  docker-compose
+  brew
   last-working-dir
-  zsh-syntax-highlighting
   colored-man-pages
   battery
   tmux
@@ -43,14 +45,14 @@ export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:/usr/local/lib"
 
 # Pipenv
 export PIPENV_VENV_IN_PROJECT=1
-export PIPENV_DEFAULT_PYTHON_VERSION=3.7
+export PIPENV_DEFAULT_PYTHON_VERSION=3.8
 
 
 # For Mac
 if [[ "$OSTYPE" == "darwin"* ]]; then
   export LC_ALL=en_US.UTF-8
   export LANG=en_US.UTF-8
-  export PATH="$PATH:/Users/vldpro/Library/Python/3.7/bin"
+  export PATH="$PATH:/opt/homebrew/bin/"
 fi
 
 
