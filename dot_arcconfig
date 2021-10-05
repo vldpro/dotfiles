@@ -1,0 +1,12 @@
+[core]
+    editor = vim
+
+[alias]
+    fx = ci -m "fix"
+    ph = push -u origin HEAD
+    pf = push -fu origin HEAD
+    st = status --short
+    co = checkout
+    ci = commit -v
+    lg = log --graph
+    br = branch
