@@ -42,7 +42,6 @@ autoload -Uz compinit && compinit -i
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:/usr/local/lib"
 
-
 # Pipenv
 export PIPENV_VENV_IN_PROJECT=1
 export PIPENV_DEFAULT_PYTHON_VERSION=3.8
@@ -50,6 +49,8 @@ export PIPENV_DEFAULT_PYTHON_VERSION=3.8
 
 # For Mac
 if [[ "$OSTYPE" == "darwin"* ]]; then
+  # Set VSCode alias 
+  code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
   export LC_ALL=en_US.UTF-8
   export LANG=en_US.UTF-8
   export PATH="$PATH:/opt/homebrew/bin/"
