@@ -1,11 +1,9 @@
 [user]
 	email = vladimir.provalov@emlid.com
-	name = Vladimir ProvaLove
+	name = Vladimir Provalov
 [core]
 	editor = vim
-
 [alias]
-    please = push --force-with-lease
 	fx = ci -m "fix"
 	ph = push -u origin HEAD
 	pf = push -fu origin HEAD
@@ -14,9 +12,3 @@
 	ci = commit -v
 	br = branch
 	lg = log --graph --abbrev-commit --pretty=short   
-	undo = reset --soft $(git log --format=%H -2 | tail -1)
-[filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
